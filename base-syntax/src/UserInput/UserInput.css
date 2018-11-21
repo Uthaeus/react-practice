@@ -1,4 +1,12 @@
 .Input {
     text-align: center;
+}
+
+.In {
+    border: 3px solid blue;
+    border-radius: 4px;
+    width: 80%;
     font-size: 2em;
+    padding: 10px;
+    margin: 25px;
 }

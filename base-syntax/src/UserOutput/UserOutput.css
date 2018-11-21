@@ -1,0 +1,13 @@
+.UserOut {
+    text-align: center;
+    padding: 20px;
+    margin: 25px;
+}
+
+.name {
+    text-align: left;
+    font-size: 3em;
+    color: green;
+    padding: 12px;
+    margin: 10px;
+}
