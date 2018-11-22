@@ -14,16 +14,17 @@ class App extends Component {
     this.setState({input: event.target.value});
   }
 
-  charRemovedHandler = (event, index) => {
-    let characters = this.state.input.split('').splice(index, 1).join('');
+  charRemovedHandler = (index) => {
+    let characters = this.state.input.slice().split('');
+    characters.splice(index, 1);
 
-    this.setState({input: characters});
+    this.setState({input: characters.join('')});
   }
 
   render() {
     let chars = this.state.input.split('').map((c, index) => {
       return (
-        <CharComponent char={c} changed={(event) => this.charRemovedHandler(index)} />
+        <CharComponent char={c} changed={() => this.charRemovedHandler(index)} />
       );
     })
 
