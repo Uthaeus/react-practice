@@ -9,11 +9,14 @@ class App extends Component {
     input: 'Enter Input Here'
   }
 
+  inputChangedHandler = (event) => {
+    this.setState({input: event.target.value});
+  }
 
   render() {
     return (
       <div className="App">
-        <input type='text' value={this.state.input} className='input' />
+        <input type='text' value={this.state.input} className='input' onChange={this.inputChangedHandler} />
         <ValidationComponent len={this.state.input.length} />
       </div>
     );
