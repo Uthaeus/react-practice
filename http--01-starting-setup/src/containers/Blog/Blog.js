@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import axios from 'axios';
 // https://jsonplaceholder.typicode.com/posts
 
+import { Route } from 'react-router-dom';
+
 import './Blog.css';
 import Posts from './Posts/Posts';
 
@@ -18,7 +20,7 @@ class Blog extends Component {
                         </ul>
                     </nav>
                 </header>
-                <Posts />
+                <Route path="/" exact render={() => } />
             </div>
         );
     }
